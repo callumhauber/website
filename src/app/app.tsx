@@ -18,7 +18,7 @@ export function App() {
           </StyledApp>
         }
       />
-      <Route path="/about" element={<span>test</span>} />
+      <Route path="/about" element={<h2>test</h2>} />
     </Routes>
   );
 }
