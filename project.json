@@ -54,7 +54,7 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/website"],
+      "outputs": ["{projectRoot}/coverage/website"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "coverage/website"
