@@ -1,5 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
 import styled from '@emotion/styled';
+import { Routes, Route } from 'react-router-dom';
 
 import NxWelcome from './nx-welcome';
 

@@ -3,11 +3,55 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
-      "rules": {}
+      "rules": {
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              "parent",
+              "sibling",
+              "index",
+              "object",
+              "type"
+            ],
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            },
+            "newlines-between": "always",
+            "warnOnUnassignedImports": "true"
+          }
+        ]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
-      "rules": {}
+      "rules": {
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              "parent",
+              "sibling",
+              "index",
+              "object",
+              "type"
+            ],
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            },
+            "newlines-between": "always",
+            "warnOnUnassignedImports": "true"
+          }
+        ]
+      }
     }
   ],
   "extends": ["plugin:@nx/react", "./.eslintrc.base.json"]
