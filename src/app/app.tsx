@@ -10,16 +10,16 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <Routes>
-      <Route path="/"
-      element={
-        <StyledApp>
-          <NxWelcome title="website" />
-        </StyledApp>
-      }
+      <Route
+        path="/"
+        element={
+          <StyledApp>
+            <NxWelcome title="website" />
+          </StyledApp>
+        }
       />
       <Route path="/about" element={<h2>test</h2>} />
     </Routes>
-    
   );
 }
 
