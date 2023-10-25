@@ -1,5 +1,10 @@
-import type { PlaywrightTestConfig } from '@playwright/test';
-import { devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
+import { nxE2EPreset } from '@nx/playwright/preset';
+
+import { workspaceRoot } from '@nx/devkit';
+
+// For CI, you may want to set BASE_URL to the deployed application.
+const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
 
 /**
  * Read environment variables from file.
@@ -8,77 +13,21 @@ import { devices } from '@playwright/test';
 // require('dotenv').config();
 
 /**
- * See https://playwright.dev/docs/test-configuration for more information
+ * See https://playwright.dev/docs/test-configuration.
  */
-
-const baseURL = process.env.E2E_BASE_URL || 'http://localhost:4200/';
-
-export const config: PlaywrightTestConfig = {
-  testDir: './src/e2e',
-  retries: process.env.CI ? 2 : 0,
-  maxFailures: 2,
-  timeout: 30 * 1000,
-  expect: {
-    timeout: 5000,
-  },
+export default defineConfig({
+  ...nxE2EPreset(__filename, { testDir: './src' }),
+  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    actionTimeout: 0,
     baseURL,
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
-  reporter: [
-    ['html', { outputFolder: '../dist/e2e/playwright-report' }],
-    ['json', { outputFile: '../dist/e2e/playwright-report/test-results.json' }],
-  ],
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  workers: process.env.CI ? 1 : undefined,
-  projects: [
-    {
-      name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-      },
-    },
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
-    },
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-      },
-    },
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: {
-    //     ...devices['Pixel 5'],
-    //   },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: {
-    //     ...devices['iPhone 12'],
-    //   },
-    // },
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: {
-    //     channel: 'msedge',
-    //   },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: {
-    //     channel: 'chrome',
-    //   },
-    // },
-  ],
-};
-
-export default config;
+  /* Run your local dev server before starting the tests */
+  webServer: {
+    command: 'pnpm exec nx serve website',
+    url: 'http://localhost:4200',
+    reuseExistingServer: !process.env.CI,
+    cwd: workspaceRoot,
+  },
+});
