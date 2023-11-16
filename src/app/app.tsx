@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import { Routes, Route } from 'react-router-dom';
+import { Button } from '@website/ui';
 
 import NxWelcome from './nx-welcome';
+import { About } from '../pages';
 
 const StyledApp = styled.div`
   // Your style here
@@ -18,7 +20,8 @@ export function App() {
           </StyledApp>
         }
       />
-      <Route path="/about" element={<h2>test</h2>} />
+      <Route path="/test" element={<Button nav="/about" text="ABOUT" />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 }
