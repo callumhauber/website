@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
-import { Routes, Route } from 'react-router-dom';
 import { Button } from '@website/ui';
+import { Routes, Route } from 'react-router-dom';
+
+import { About } from '../pages';
 
 import NxWelcome from './nx-welcome';
-import { About } from '../pages';
 
 const StyledApp = styled.div`
   // Your style here
