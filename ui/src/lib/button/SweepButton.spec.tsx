@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Button from './button';
+import SweepButton from './SweepButton';
 
 describe('Button', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Button />);
+    const { baseElement } = render(<SweepButton />);
     expect(baseElement).toBeTruthy();
   });
 });
