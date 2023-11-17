@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 /* eslint-disable-next-line */
 export interface ButtonProps {
-  nav: string;
+  nav?: string;
+  link?: string;
   text: string;
 }
 
@@ -66,11 +67,25 @@ const StyledSweepButton = styled.button`
   }
 `;
 
-export function SweepButton({ nav, text }: ButtonProps) {
+export function SweepButton({ nav, link, text }: ButtonProps) {
   const navigate = useNavigate();
 
+  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // defocus button after clicking
+    e.currentTarget.blur();
+
+    // if there's a nav link, navigate there
+    if (nav) {
+      navigate(nav);
+    }
+    // otherwise assume there's am external link and open a new tab
+    else {
+      window.open(link, '_blank');
+    }
+  };
+
   return (
-    <StyledSweepButton onClick={() => navigate(nav)}>{text}</StyledSweepButton>
+    <StyledSweepButton onClick={(e) => onClick(e)}>{text}</StyledSweepButton>
   );
 }
 
