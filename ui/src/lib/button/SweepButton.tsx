@@ -7,7 +7,7 @@ export interface ButtonProps {
   text: string;
 }
 
-const SweepButton = styled.button`
+const StyledSweepButton = styled.button`
   width: 90%;
   height: 4em;
   background: rgba(0, 0, 0, 0.6);
@@ -66,10 +66,12 @@ const SweepButton = styled.button`
   }
 `;
 
-export function Button({ nav, text }: ButtonProps) {
+export function SweepButton({ nav, text }: ButtonProps) {
   const navigate = useNavigate();
 
-  return <SweepButton onClick={() => navigate(nav)}>{text}</SweepButton>;
+  return (
+    <StyledSweepButton onClick={() => navigate(nav)}>{text}</StyledSweepButton>
+  );
 }
 
-export default Button;
+export default SweepButton;

@@ -1,2 +1,2 @@
-export * from './lib/button/button';
+export * from './lib/button/SweepButton';
 export * from './lib/ui';
