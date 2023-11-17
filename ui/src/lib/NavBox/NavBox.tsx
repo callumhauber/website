@@ -12,6 +12,10 @@ const StyledNavBox = styled.div`
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 768px) {
+    max-width: 85%;
+  }
 `;
 
 export function NavBox({ children }: NavBoxProps) {
