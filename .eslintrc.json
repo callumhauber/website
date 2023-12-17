@@ -22,7 +22,7 @@
               "caseInsensitive": true
             },
             "newlines-between": "always",
-            "warnOnUnassignedImports": "true"
+            "warnOnUnassignedImports": true
           }
         ]
       }
@@ -48,7 +48,7 @@
               "caseInsensitive": true
             },
             "newlines-between": "always",
-            "warnOnUnassignedImports": "true"
+            "warnOnUnassignedImports": true
           }
         ]
       }
