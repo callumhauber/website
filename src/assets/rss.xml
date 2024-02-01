@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>anchovie.art</title>
+        <link>https://anchovie.art/projects</link>
+        <description>anchovie's project updates</description>
+        <language>en-us</language>
+        <copyright>all work licensed under CC BY-SA 4.0</copyright>
+        <image>
+            <title>anchovie's projects</title>
+            <link>https://anchovie.art/</link>
+            <url>https://anchovie.art/favicon-32x32.png</url>
+            <width>16</width>
+            <height>16</height>
+        </image>
+        <item>
+            <title>new project and refsheet!</title>
+            <pubDate>Sun, 22 Oct 2023 14:00:00</pubDate>
+            <link>https://anchovie.art/projects</link>
+            <description>added a new project: baconboard. this has been a LONG time in the works but is finally in a publishable state. will continue to update and improve the build guide over time. check it out on the projects page! i've also refreshed anchovie's character design a bit; check out hir new refsheet on the about page.</description>
+        </item>
+        <item>
+            <title>printable shooting target</title>
+            <pubDate>Tue, 21 Feb 2023 18:00:00</pubDate>
+            <link>https://anchovie.art/projects</link>
+            <description>added a new project: advanced pistol shooting diagnostic target (revised 2023 edition). check it out on the projects page!</description>
+        </item>
+        <item>
+            <title>new site page: fwends!! and other minor updates</title>
+            <pubDate>Sun, 01 Jan 2023 23:00:00</pubDate>
+            <link>https://anchovie.art/fwends</link>
+            <description>there's a new page on the website! it's a webring of sorts, so you can check out my pals (who are all super awesome :D). other updates include: added "new" icon for updates, added telegram channel to about page, added/removed some badges, minor grammatical fixes.</description>
+        </item>
+        <item>
+            <title>telegram channel live!</title>
+            <pubDate>Sun, 01 Jan 2023 23:00:00</pubDate>
+            <link>https://t.me/anchoviedraws</link>
+            <description>i've set up a telegram channel that mirrors this site's rss feed updates. if you prefer getting info there, check it out!</description>
+        </item>
+        <item>
+            <title>100hr stool</title>
+            <pubDate>Sat, 31 Dec 2022 14:00:00</pubDate>
+            <link>https://medium.com/@anchoviewrites/the-100-hour-bar-stool-ce8c0f858f24</link>
+            <description>my first woodworking project, a CNC bar stool. instructions included!</description>
+        </item>
+        <item>
+            <title>meowmixes</title>
+            <pubDate>Tue, 31 Aug 2022 19:00:00</pubDate>
+            <link>https://anchovie.art/meowmixes</link>
+            <description>a collection of mixtapes exchanged with my friend jacquelyn! each mix is 60-70min and has liner notes.</description>
+        </item>
+        <item>
+            <title>cyberpunk 2077 bad?</title>
+            <pubDate>Sat, 22 Jan 2022 21:00:00</pubDate>
+            <link>https://medium.com/@anchoviewrites/on-cyberpunk-2077-1e1354e48676</link>
+            <description>a designer's perspective on cyberpunk 2077.</description>
+        </item>
+        <item>
+            <title>Forza Horizon 4 Tuning Guide</title>
+            <pubDate>Sat, 22 Jan 2022 21:00:00</pubDate>
+            <link>https://anchovie.art/fh4guide.pdf</link>
+            <description>the not particularly essential forza horizon 4 tuning guide! intended for novice tuners to learn the ropes and best practices.</description>
+        </item>
+        <item>
+            <title>not-nft</title>
+            <pubDate>Sun, 14 Mar 2021 23:00:00</pubDate>
+            <link>https://github.com/anchovie-codes/not-NFT</link>
+            <description>a small steganography project with my partner, Marzz. designed as a simple, eco-friendly alternative to NFTs.</description>
+        </item>
+    </channel>
+</rss>
