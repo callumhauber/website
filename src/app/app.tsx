@@ -2,9 +2,7 @@
 import { SweepButton } from '@website/ui';
 import { Routes, Route } from 'react-router-dom';
 
-import { About, Main } from '../pages';
-
-// import NxWelcome from './nx-welcome';
+import { About, Main, Commissions, Projects, Fwends } from '../pages';
 
 export function App() {
   return (
@@ -15,6 +13,9 @@ export function App() {
         element={<SweepButton nav="/about" text="hello lam" />}
       />
       <Route path="/about" element={<About />} />
+      <Route path="/commissions" element={<Commissions />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/fwends" element={<Fwends />} />
     </Routes>
   );
 }
