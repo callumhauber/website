@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { NavBox, SweepButton, FlexCenter } from '@website/ui';
 
-import { fishySquare, rss } from '../../assets';
+import { fishySquare } from '../../assets';
 
 /* eslint-disable-next-line */
 export interface MainProps {}
@@ -64,7 +64,7 @@ export function Main(props: MainProps) {
             `}
             target="_blank"
             rel="noreferrer"
-            href={rss}
+            href='/rss.xml'
           >
             <span role="img" aria-label="satellite dish">
               📡 RSS
