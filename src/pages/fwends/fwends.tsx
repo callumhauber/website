@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 /* eslint-disable-next-line */
-export interface AboutProps {}
+export interface FwendsProps {}
 
 const StyledAbout = styled.div`
   color: pink;
 `;
 
-export function Fwends(props: AboutProps) {
+export function Fwends(props: FwendsProps) {
   return (
     <StyledAbout>
       <h1>Welcome to About!</h1>

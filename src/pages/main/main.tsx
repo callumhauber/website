@@ -47,13 +47,13 @@ export function Main(props: MainProps) {
           />
         </FlexCenter>
         <StyledH2>meowdy! i'm anchovie</StyledH2>
-        <SweepButton nav="/about" text="ABOUT" />
-        <SweepButton link="https://www.tumblr.com/anchoviedraws" text="BLOG" />
-        <SweepButton nav="/commissions" text="COMMISSIONS" />
-        <SweepButton nav="/projects" text="PROJECTS" />
-        <SweepButton link="https://www.weasyl.com/~anchoviedraws" text="GALLERY" />
-        <SweepButton link="https://www.redbubble.com/people/anchoviedraws/" text="SHOP" />
-        <SweepButton nav="/fwends" text="FWENDS" />
+        <SweepButton text="ABOUT" nav="/about" />
+        <SweepButton text="BLOG" link="https://www.tumblr.com/anchoviedraws" />
+        <SweepButton text="COMMISSIONS" nav="/commissions" />
+        <SweepButton text="PROJECTS" nav="/projects" />
+        <SweepButton text="GALLERY" link="https://www.weasyl.com/~anchoviedraws" />
+        <SweepButton text="SHOP" link="https://www.redbubble.com/people/anchoviedraws/" />
+        <SweepButton text="FWENDS" nav="/fwends" />
         <StyledP>last updated: 10-22-2023</StyledP>
         <StyledP>
           <a
