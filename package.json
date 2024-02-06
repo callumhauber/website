@@ -22,14 +22,14 @@
     "@babel/core": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@emotion/babel-plugin": "^11.11.0",
-    "@nx/devkit": "18.0.1",
-    "@nx/eslint": "18.0.1",
-    "@nx/eslint-plugin": "18.0.1",
-    "@nx/js": "18.0.1",
-    "@nx/playwright": "18.0.1",
-    "@nx/react": "18.0.1",
-    "@nx/vite": "18.0.1",
-    "@nx/workspace": "18.0.1",
+    "@nx/devkit": "18.0.2",
+    "@nx/eslint": "18.0.2",
+    "@nx/eslint-plugin": "18.0.2",
+    "@nx/js": "18.0.2",
+    "@nx/playwright": "18.0.2",
+    "@nx/react": "18.0.2",
+    "@nx/vite": "18.0.2",
+    "@nx/workspace": "18.0.2",
     "@playwright/test": "^1.41.2",
     "@swc-node/register": "^1.8.0",
     "@swc/cli": "^0.3.6",
@@ -51,7 +51,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "jsdom": "^24.0.0",
-    "nx": "18.0.1",
+    "nx": "18.0.2",
     "prettier": "^3.2.5",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
@@ -62,3 +62,4 @@
     "pnpm": ">=8"
   }
 }
+
