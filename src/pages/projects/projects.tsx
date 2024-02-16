@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Breadcrumb } from '@website/ui';
 
 /* eslint-disable-next-line */
 export interface ProjectsProps {}
@@ -9,9 +10,9 @@ const StyledAbout = styled.div`
 
 export function Projects(props: ProjectsProps) {
   return (
-    <StyledAbout>
-      <h1>Welcome to About!</h1>
-    </StyledAbout>
+    <>
+      <Breadcrumb />
+    </>
   );
 }
 
