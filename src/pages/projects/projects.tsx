@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Breadcrumb } from '@website/ui';
+import { Breadcrumb, PageHeader } from '@website/ui';
 
 /* eslint-disable-next-line */
 export interface ProjectsProps {}
@@ -12,6 +12,7 @@ export function Projects(props: ProjectsProps) {
   return (
     <>
       <Breadcrumb />
+      <PageHeader heading="projects" subheading="where non-art activities live" />
     </>
   );
 }

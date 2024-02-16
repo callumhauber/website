@@ -1,3 +1,4 @@
+export * from './lib/PageHeader/PageHeader';
 export * from './lib/Breadcrumb/Breadcrumb';
 export * from './lib/FlexCenter/FlexCenter';
 export * from './lib/NavBox/NavBox';
