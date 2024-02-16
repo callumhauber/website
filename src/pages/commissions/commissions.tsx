@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Breadcrumb } from '@website/ui';
 
 /* eslint-disable-next-line */
 export interface CommissionsProps {}
@@ -9,9 +10,9 @@ const StyledAbout = styled.div`
 
 export function Commissions(props: CommissionsProps) {
   return (
-    <StyledAbout>
-      <h1>Welcome to About!</h1>
-    </StyledAbout>
+    <>
+      <Breadcrumb />
+    </>
   );
 }
 
