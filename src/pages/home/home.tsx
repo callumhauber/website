@@ -33,7 +33,7 @@ const StyledP = styled.p`
   padding-right: 0.5em;
 `;
 
-export function Main(props: MainProps) {
+export function Home(props: MainProps) {
   return (
     <StyledMain>
       <NavBox>
@@ -64,7 +64,7 @@ export function Main(props: MainProps) {
             `}
             target="_blank"
             rel="noreferrer"
-            href='/rss.xml'
+            href="/rss.xml"
           >
             <span role="img" aria-label="satellite dish">
               📡 RSS
@@ -76,4 +76,4 @@ export function Main(props: MainProps) {
   );
 }
 
-export default Main;
+export default Home;

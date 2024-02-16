@@ -4,10 +4,10 @@ import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { background } from './assets';
-import { About, Main, Commissions, Projects, Fwends } from './pages';
+import { About, Home, Commissions, Projects, Fwends } from './pages';
 
 const router = createBrowserRouter([
-  { path: '/', element: <Main /> },
+  { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
   { path: '/commissions', element: <Commissions /> },
   { path: '/projects', element: <Projects /> },
