@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Breadcrumb } from '@website/ui';
+import { Breadcrumb, PageHeader } from '@website/ui';
 
 /* eslint-disable-next-line */
 export interface FwendsProps {}
@@ -12,6 +12,7 @@ export function Fwends(props: FwendsProps) {
   return (
     <>
       <Breadcrumb />
+      <PageHeader heading="fwends!!" subheading="folks you should know about" />
     </>
   );
 }
