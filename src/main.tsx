@@ -1,32 +1,38 @@
 import { Global, css } from '@emotion/react';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './app/app';
 import { background } from './assets';
+import { About, Main, Commissions, Projects, Fwends } from './pages';
+
+const router = createBrowserRouter([
+  { path: '/', element: <Main /> },
+  { path: '/about', element: <About /> },
+  { path: '/commissions', element: <Commissions /> },
+  { path: '/projects', element: <Projects /> },
+  { path: '/fwends', element: <Fwends /> }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-      <Global
-        styles={css`
-          html {
-            width: 100%;
-            margin: auto;
-          }
+    <RouterProvider router={router} />
+    <Global
+      styles={css`
+        html {
+          width: 100%;
+          margin: auto;
+        }
 
-          body {
-            width: 100%;
-            margin: auto;
-            background-image: url(${background});
-            background-size: auto;
-            background-repeat: repeat;
-          }
-        `}
-      />
-    </BrowserRouter>
+        body {
+          width: 100%;
+          margin: auto;
+          background-image: url(${background});
+          background-size: auto;
+          background-repeat: repeat;
+        }
+      `}
+    />
   </StrictMode>
 );
