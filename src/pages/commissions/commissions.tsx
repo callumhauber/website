@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Breadcrumb } from '@website/ui';
+import { Breadcrumb, PageHeader } from '@website/ui';
 
 /* eslint-disable-next-line */
 export interface CommissionsProps {}
@@ -12,6 +12,7 @@ export function Commissions(props: CommissionsProps) {
   return (
     <>
       <Breadcrumb />
+      <PageHeader heading="commissions" subheading="so, you want to give me money..." />
     </>
   );
 }
