@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 import HomeFooterBadge from './HomeFooterBadge';
 import { web14, neocities, sayNoToWeb3, signature } from '../../assets';
 
@@ -9,6 +8,7 @@ export interface HomeFooterProps {}
 const StyledHomeFooter = styled.div`
   display: block;
   text-align: center;
+  padding-top: 2em;
 `;
 
 export function HomeFooter(props: HomeFooterProps) {
