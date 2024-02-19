@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { NavBox, SweepButton, FlexCenter } from '@website/ui';
+import { NavBox, SweepButton, FlexCenter, HomeFooter } from '@website/ui';
 
 import { fishySquare } from '../../assets';
 
@@ -50,7 +50,7 @@ export function Home(props: MainProps) {
         <SweepButton text="ABOUT" nav="/about" />
         <SweepButton text="BLOG" link="https://www.tumblr.com/anchoviedraws" />
         <SweepButton text="COMMISSIONS" nav="/commissions" />
-        <SweepButton text="PROJECTS" nav="/projects" />
+        <SweepButton text="PROJECTS" nav="/projects" isNewTag />
         <SweepButton text="GALLERY" link="https://www.weasyl.com/~anchoviedraws" />
         <SweepButton text="SHOP" link="https://www.redbubble.com/people/anchoviedraws/" />
         <SweepButton text="FWENDS" nav="/fwends" />
@@ -72,6 +72,7 @@ export function Home(props: MainProps) {
           </a>
         </StyledP>
       </NavBox>
+      <HomeFooter />
     </StyledMain>
   );
 }

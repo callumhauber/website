@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 
+import { newTagImg } from '../../assets';
+
 /* eslint-disable-next-line */
 export interface ButtonProps {
   nav?: string;
   link?: string;
   text: string;
+  isNewTag?: boolean;
 }
 
 const StyledSweepButton = styled.button`
@@ -67,7 +70,32 @@ const StyledSweepButton = styled.button`
   }
 `;
 
-export function SweepButton({ nav, link, text }: ButtonProps) {
+const NewTag = styled.div`
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  filter: drop-shadow(0 0 6px #000000);
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+
+  /* arrow_marker bounce effect (stolen) */
+  @keyframes bounce {
+    from {
+      transform: translate3d(30%, 0, 0);
+    }
+    to {
+      transform: translate3d(30%, 10px, 0);
+    }
+  }
+
+  img {
+    width: 75px;
+  }
+`;
+
+export function SweepButton({ nav, link, text, isNewTag }: ButtonProps) {
   const navigate = useNavigate();
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -85,7 +113,14 @@ export function SweepButton({ nav, link, text }: ButtonProps) {
   };
 
   return (
-    <StyledSweepButton onClick={(e) => onClick(e)}>{text}</StyledSweepButton>
+    <StyledSweepButton onClick={(e) => onClick(e)}>
+      {isNewTag && (
+        <NewTag>
+          <img src={newTagImg} alt="new tag" />
+        </NewTag>
+      )}
+      {text}
+    </StyledSweepButton>
   );
 }
 
