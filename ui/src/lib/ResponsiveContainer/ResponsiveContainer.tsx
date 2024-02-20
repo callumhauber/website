@@ -8,6 +8,7 @@ export interface ResponsiveContainerProps {
 const StyledResponsiveContainer = styled.div`
   margin: auto;
   max-width: 60em;
+  padding-bottom: 4em;
 
   @media (max-width: 768px) {
     width: 100%;

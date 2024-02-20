@@ -2,7 +2,7 @@ import { Global, css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Breadcrumb, CollapsibleSection, Link, PageHeader, ResponsiveContainer } from '@website/ui';
 
-import { backgroundFishy2, boxNoBg } from '../../assets';
+import { backgroundFishy2, boxNoBg, anchovieRefsheet } from '../../assets';
 
 /* eslint-disable-next-line */
 export interface AboutProps {}
@@ -71,6 +71,55 @@ export function About(props: AboutProps) {
             you wanna reach out - whether it's to talk shop, request a commission, show me your cool
             keyboard, or just say hi - <strong>don't be shy!</strong>
           </p>
+        </CollapsibleSection>
+        <CollapsibleSection buttonText="//where to find me">
+          <p>
+            <strong>telegram:</strong>
+            <Link href="https://t.me/anchovie" spacing="left">
+              @anchovie
+            </Link>
+          </p>
+          <p>
+            <strong>tg channel:</strong>
+            <Link href="https://t.me/anchoviedraws" spacing="left">
+              @anchoviedraws
+            </Link>
+          </p>
+          <p>
+            <strong>tumblr:</strong>
+            <Link href="https://www.tumblr.com/anchoviedraws" spacing="left">
+              anchoviedraws
+            </Link>
+          </p>
+          <p>
+            <strong>weasyl:</strong>
+            <Link href="https://www.weasyl.com/~anchoviedraws" spacing="left">
+              anchoviedraws
+            </Link>
+          </p>
+          <p>
+            <strong>picarto:</strong>
+            <Link href="https://picarto.tv/anchoviedraws" spacing="left">
+              anchoviedraws
+            </Link>
+          </p>
+        </CollapsibleSection>
+        <CollapsibleSection buttonText="//refsheet">
+          <div
+            css={css`
+              padding: 0.5em;
+              width: auto;
+            `}
+          >
+            <img
+              src={anchovieRefsheet}
+              alt="anchovie's refsheet"
+              css={css`
+                max-width: 100%;
+              `}
+            />
+            <p>character info page coming soon&#8482;</p>
+          </div>
         </CollapsibleSection>
       </ResponsiveContainer>
     </StyledAbout>
