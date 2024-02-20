@@ -4,7 +4,6 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
 
-import { background } from './assets';
 import { About, Home, Commissions, Projects, Fwends } from './pages';
 
 const StyledLink = styled(Link)`
@@ -80,7 +79,6 @@ root.render(
         body {
           width: 100%;
           margin: auto;
-          background-image: url(${background});
           background-size: auto;
           background-repeat: repeat;
         }

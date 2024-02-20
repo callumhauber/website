@@ -1,8 +1,8 @@
-import { css } from '@emotion/react';
+import { Global, css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { NavBox, SweepButton, FlexCenter, HomeFooter } from '@website/ui';
 
-import { fishySquare } from '../../assets';
+import { fishySquare, backgroundSleepy } from '../../assets';
 
 /* eslint-disable-next-line */
 export interface MainProps {}
@@ -36,6 +36,13 @@ const StyledP = styled.p`
 export function Home(props: MainProps) {
   return (
     <StyledMain>
+      <Global
+        styles={css`
+          body {
+            background-image: url(${backgroundSleepy});
+          }
+        `}
+      />
       <NavBox>
         <FlexCenter>
           <img
