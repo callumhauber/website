@@ -1,3 +1,4 @@
+export * from './lib/Link/Link';
 export * from './lib/ResponsiveContainer/ResponsiveContainer';
 export * from './lib/CollapsibleSection/CollapsibleSection';
 export * from './lib/HomeFooter/HomeFooter';
