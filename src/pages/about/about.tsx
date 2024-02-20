@@ -1,6 +1,6 @@
 import { Global, css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Breadcrumb, CollapsibleSection, PageHeader, ResponsiveContainer } from '@website/ui';
+import { Breadcrumb, CollapsibleSection, Link, PageHeader, ResponsiveContainer } from '@website/ui';
 
 import { backgroundFishy2, boxNoBg } from '../../assets';
 
@@ -38,24 +38,17 @@ export function About(props: AboutProps) {
             rapid prototyping (3d printing, cnc, lasercutting), music, light coding, and keyboards.
           </p>
           <p>
-            i've been involved in the{' '}
-            <a href="https://en.wikipedia.org/wiki/Furry_fandom" target="_blank">
-              furry
-            </a>{' '}
-            and{' '}
-            <a href="https://en.wikipedia.org/wiki/Maker_culture" target="_blank">
-              maker
-            </a>{' '}
+            i've been involved in the
+            <Link href="https://en.wikipedia.org/wiki/Furry_fandom">furry</Link>
+            and
+            <Link href="https://en.wikipedia.org/wiki/Maker_culture">maker</Link>
             communities for as long as i've had access to a computer at home. if i had to tie an age
             to my first encounter, i'd say i was about 10 years old. suffice to say,{' '}
             <strong>furries and technology have been with me for most of my life</strong>. many of
-            my projects involve both; my most publicized being the now-defunct{' '}
-            <a
-              href="https://lapfoxtrax.fandom.com/wiki/Lapfox_Trax_Remix_Sound_Team"
-              target="_blank"
-            >
+            my projects involve both; my most publicized being the now-defunct
+            <Link href="https://lapfoxtrax.fandom.com/wiki/Lapfox_Trax_Remix_Sound_Team">
               Lapfox Trax Remix Sound Team
-            </a>{' '}
+            </Link>
             (we were young and bad at music, but it was a good time). members of these communities
             have been foundational to what i do today, either directly as collaborators and mentors
             or indirectly as inspirers. i try to give back by logging my journeys publicly as those
@@ -65,10 +58,10 @@ export function About(props: AboutProps) {
           <p>
             problem is, i'm generally <strong>pretty quiet in big spaces</strong>. i used to log my
             thoughts and projects on twitter, but posting there made me anxious. to suit my
-            preference for smaller environments i revived my{' '}
-            <a href="https://www.tumblr.com/anchoviedraws" target="_blank">
+            preference for smaller environments i revived my
+            <Link href="https://www.tumblr.com/anchoviedraws" spacing="left">
               blog on tumblr
-            </a>
+            </Link>
             . if you want to hear my thoughts in real-time, consider following that. if you just
             want to see the finished results, follow this website's RSS feed or bookmark my URL and
             check in every now and then :3
