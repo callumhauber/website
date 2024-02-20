@@ -106,7 +106,7 @@ export function SweepButton({ nav, link, text, isNewTag }: ButtonProps) {
     if (nav) {
       navigate(nav);
     }
-    // otherwise assume there's am external link and open a new tab
+    // otherwise assume there's an external link and open a new tab
     else {
       window.open(link, '_blank');
     }

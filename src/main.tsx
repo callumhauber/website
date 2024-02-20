@@ -82,6 +82,27 @@ root.render(
           background-size: auto;
           background-repeat: repeat;
         }
+
+        p {
+          color: #ffffff;
+          font-family: monospace;
+          font-size: 14pt;
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+        }
+
+        /* link styling */
+        a {
+          color: #e9b05c;
+        }
+
+        a:hover {
+          border-bottom: 1px solid;
+        }
+
+        a:visited {
+          color: #e9b05c;
+        }
       `}
     />
   </StrictMode>
