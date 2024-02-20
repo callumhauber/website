@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { useState } from 'react';
 
-import { backgroundGlitch } from '../../assets';
+import { Section } from './Section';
 
 /* eslint-disable-next-line */
 export interface CollapsibleSectionProps {
@@ -49,15 +49,6 @@ const active = css`
   }
 `;
 
-const SectionContent = styled.div`
-  margin: auto;
-  width: 100%;
-  text-align: left;
-  background-image: url(${backgroundGlitch});
-  padding-bottom: 1em;
-  padding-top: 0.5em;
-`;
-
 export function CollapsibleSection({ buttonText, children }: CollapsibleSectionProps) {
   const [isActive, setIsActive] = useState(false);
 
@@ -71,7 +62,7 @@ export function CollapsibleSection({ buttonText, children }: CollapsibleSectionP
       >
         {buttonText}
       </SectionButton>
-      {isActive && <SectionContent>{children}</SectionContent>}
+      {isActive && <Section>{children}</Section>}
     </>
   );
 }
