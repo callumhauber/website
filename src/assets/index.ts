@@ -8,3 +8,7 @@ export { default as fishySquare } from './images/icons/fishy_square.png';
 export { default as boxNoBg } from './images/icons/box_no_bg.png';
 
 export { default as anchovieRefsheet } from './images/refsheet.png';
+
+export { default as banner01 } from './images/commissions/banner-01.png';
+export { default as banner02 } from './images/commissions/banner-02.png';
+export { default as banner03 } from './images/commissions/banner-03.png';
