@@ -5,3 +5,4 @@ export { default as backgroundHappy } from './images/backgrounds/happy.png';
 export { default as backgroundTapeTileDark } from './images/backgrounds/tapetile_drk.png';
 
 export { default as fishySquare } from './images/icons/fishy_square.png';
+export { default as boxNoBg } from './images/icons/box_no_bg.png';
