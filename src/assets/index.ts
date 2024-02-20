@@ -6,3 +6,5 @@ export { default as backgroundTapeTileDark } from './images/backgrounds/tapetile
 
 export { default as fishySquare } from './images/icons/fishy_square.png';
 export { default as boxNoBg } from './images/icons/box_no_bg.png';
+
+export { default as anchovieRefsheet } from './images/refsheet.png';
