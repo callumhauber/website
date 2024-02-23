@@ -7,6 +7,15 @@ export { default as backgroundTapeTileDark } from './images/backgrounds/tapetile
 export { default as fishySquare } from './images/icons/fishy_square.png';
 export { default as boxNoBg } from './images/icons/box_no_bg.png';
 
+// project icons
+export { default as barstool } from './images/icons/projects/barstool.png';
+export { default as baconboard } from './images/icons/projects/bb.png';
+export { default as cp2077 } from './images/icons/projects/cp2077.png';
+export { default as forza } from './images/icons/projects/forza.png';
+export { default as notnft } from './images/icons/projects/notnft.png';
+export { default as tapetile } from './images/icons/projects/tapetile.png';
+export { default as target } from './images/icons/projects/target.png';
+
 export { default as anchovieRefsheet } from './images/refsheet.png';
 
 export { default as banner01 } from './images/commissions/banner-01.png';
