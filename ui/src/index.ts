@@ -1,3 +1,5 @@
+export * from './lib/ProjectTable/ProjectTable';
+export * from './lib/ProjectTable/ProjectTableRow';
 export * from './lib/Heading/Heading';
 export * from './lib/Link/Link';
 export * from './lib/ResponsiveContainer/ResponsiveContainer';
