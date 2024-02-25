@@ -4,8 +4,8 @@ import React from 'react';
 /* eslint-disable-next-line */
 export interface ProjectTableRowProps {
   button: React.ReactNode;
-  icon: string;
-  iconAlt: string;
+  icon?: string | null;
+  iconAlt?: string | null;
   description: string | React.ReactNode;
 }
 
@@ -46,15 +46,22 @@ const StyledProjectTableDescriptionCell = styled.td`
   }
 `;
 
-export function ProjectTableRow({ button, icon, iconAlt, description }: ProjectTableRowProps) {
+export function ProjectTableRow({
+  button,
+  icon = null,
+  iconAlt = null,
+  description
+}: ProjectTableRowProps) {
   return (
     <StyledProjectTableRow>
       <StyledProjectTableButtonCell>{button}</StyledProjectTableButtonCell>
-      <StyledProjectTableIconCell>
-        <div>
-          <img alt={iconAlt} src={icon}></img>
-        </div>
-      </StyledProjectTableIconCell>
+      {icon && iconAlt && (
+        <StyledProjectTableIconCell>
+          <div>
+            <img alt={iconAlt} src={icon}></img>
+          </div>
+        </StyledProjectTableIconCell>
+      )}
       <StyledProjectTableDescriptionCell>
         <p>{description}</p>
       </StyledProjectTableDescriptionCell>
