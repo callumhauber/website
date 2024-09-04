@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import styled from '@emotion/styled';
+import { Fragment } from 'react';
 import { useMatches } from 'react-router-dom';
 
 /* eslint-disable-next-line */
@@ -50,10 +51,10 @@ export function Breadcrumb(props: BreadcrumbProps) {
     <Nav>
       <ol>
         {crumbs.map((crumb, index) => (
-          <>
+          <Fragment key={`${index}-fragment`}>
             <li key={index}>{crumb}</li>
             {index !== crumbs.length - 1 && <li key={`${index}-slash`}> / </li>}
-          </>
+          </Fragment>
         ))}
       </ol>
     </Nav>
