@@ -46,6 +46,10 @@ const StyledProjectTableDescriptionCell = styled.td`
   }
 `;
 
+const wrapWithParagraph = (description: string | React.ReactNode) => {
+  return typeof description === 'string' ? <p>{description}</p> : description;
+};
+
 export function ProjectTableRow({
   button,
   icon = null,
@@ -63,7 +67,7 @@ export function ProjectTableRow({
         </StyledProjectTableIconCell>
       )}
       <StyledProjectTableDescriptionCell>
-        <p>{description}</p>
+        {wrapWithParagraph(description)}
       </StyledProjectTableDescriptionCell>
     </StyledProjectTableRow>
   );
