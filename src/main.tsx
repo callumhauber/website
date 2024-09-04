@@ -2,9 +2,9 @@ import { Global, css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Link, Outlet, RouterProvider } from 'react-router-dom';
 
-import { About, Home, Commissions, Projects, Fwends } from './pages';
+import { About, Home, Commissions, Projects, Fwends, Meowmixes } from './pages';
 
 const StyledLink = styled(Link)`
   border: none;
@@ -31,28 +31,41 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/about',
+        path: 'about',
         element: <About />,
         handle: {
           crumb: () => 'about'
         }
       },
       {
-        path: '/commissions',
+        path: 'commissions',
         element: <Commissions />,
         handle: {
           crumb: () => 'commissions'
         }
       },
       {
-        path: '/projects',
-        element: <Projects />,
+        path: 'projects',
+        element: <Outlet />,
         handle: {
           crumb: () => 'projects'
-        }
+        },
+        children: [
+          {
+            index: true,
+            element: <Projects />
+          },
+          {
+            path: 'meowmixes',
+            element: <Meowmixes />,
+            handle: {
+              crumb: () => 'meowmixes'
+            }
+          }
+        ]
       },
       {
-        path: '/fwends',
+        path: 'fwends',
         element: <Fwends />,
         handle: {
           crumb: () => 'fwends'
