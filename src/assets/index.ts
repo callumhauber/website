@@ -21,3 +21,7 @@ export { default as anchovieRefsheet } from './images/refsheet.png';
 export { default as banner01 } from './images/commissions/banner-01.png';
 export { default as banner02 } from './images/commissions/banner-02.png';
 export { default as banner03 } from './images/commissions/banner-03.png';
+
+// project files
+export { default as aspdt } from './pdfs/APSDT_2023.pdf';
+export { default as fh4guide } from './pdfs/fh4guide.pdf';
