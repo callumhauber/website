@@ -33,10 +33,12 @@ const StyledProjectTableHeader = styled.tr`
 export function ProjectTable({ title, children }: ProjectTableProps) {
   return (
     <StyledProjectTable>
-      <StyledProjectTableHeader>
-        <th colSpan={3}>{'//go on, click one :3'}</th>
-      </StyledProjectTableHeader>
-      {children}
+      <thead>
+        <StyledProjectTableHeader>
+          <th colSpan={3}>{title}</th>
+        </StyledProjectTableHeader>
+      </thead>
+      <tbody>{children}</tbody>
     </StyledProjectTable>
   );
 }
