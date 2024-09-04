@@ -17,7 +17,9 @@ import {
   tapetile,
   cp2077,
   forza,
-  notnft
+  notnft,
+  aspdt,
+  fh4guide
 } from '../../assets';
 
 /* eslint-disable-next-line */
@@ -48,7 +50,7 @@ export function Projects(props: ProjectsProps) {
             description="a tasty handwire keyboard you can make yourself. features a unique ortholinear layout with a southpaw numpad, uniform modifier keys, and a line nav. powered by QMK firmware."
           />
           <ProjectTableRow
-            button={<SweepButton text="APSDT" link="https://github.com/callumhauber/baconboard" />}
+            button={<SweepButton text="APSDT" link={aspdt} />}
             icon={target}
             iconAlt="target icon"
             description="a printable paper target for all your shooting needs. revised 2023 edition!"
@@ -65,9 +67,7 @@ export function Projects(props: ProjectsProps) {
             description="my first woodworking project, a CNC bar stool. instructions included!"
           />
           <ProjectTableRow
-            button={
-              <SweepButton text="meowmixes" link="https://github.com/callumhauber/baconboard" />
-            }
+            button={<SweepButton text="meowmixes" nav="meowmixes" />}
             icon={tapetile}
             iconAlt="cassette tape icon"
             description="a collection of mixtapes exchanged with my friend jacquelyn! each mix is 60-70min and has liner notes."
@@ -84,16 +84,14 @@ export function Projects(props: ProjectsProps) {
             description="a designer's perspective on cyberpunk 2077."
           />
           <ProjectTableRow
-            button={
-              <SweepButton text="fh4 guide" link="https://github.com/callumhauber/baconboard" />
-            }
+            button={<SweepButton text="fh4 guide" link={fh4guide} />}
             icon={forza}
             iconAlt="forza icon"
             description={
-              <>
+              <p>
                 <strong>the not particularly essential forza horizon 4 tuning guide!</strong>
                 intended for novice tuners to learn the ropes and best practices.
-              </>
+              </p>
             }
           />
           <ProjectTableRow
