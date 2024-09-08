@@ -4,8 +4,11 @@ export { default as backgroundXTile } from './images/backgrounds/xtile.png';
 export { default as backgroundHappy } from './images/backgrounds/happy.png';
 export { default as backgroundTapeTileDark } from './images/backgrounds/tapetile_drk.png';
 
+// icons
 export { default as fishySquare } from './images/icons/fishy_square.png';
 export { default as boxNoBg } from './images/icons/box_no_bg.png';
+export { default as anchovieHeadshot } from './images/icons/anchovie_headshot.png';
+export { default as jacquelynHeadshot } from './images/icons/jacquelyn_headshot.png';
 
 // project icons
 export { default as barstool } from './images/icons/projects/barstool.png';
