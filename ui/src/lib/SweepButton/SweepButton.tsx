@@ -7,6 +7,7 @@ import { newTagImg } from '../../assets';
 export interface ButtonProps {
   nav?: string;
   link?: string;
+  onClick?: () => void;
   text: string;
   isNewTag?: boolean;
 }
@@ -95,15 +96,18 @@ const NewTag = styled.div`
   }
 `;
 
-export function SweepButton({ nav, link, text, isNewTag }: ButtonProps) {
+export function SweepButton({ nav, link, onClick: onClickProp, text, isNewTag }: ButtonProps) {
   const navigate = useNavigate();
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     // defocus button after clicking
     e.currentTarget.blur();
 
-    // if there's a nav link, navigate there
-    if (nav) {
+    // if an onClick function is passed, call it
+    if (onClickProp) {
+      onClickProp();
+    } else if (nav) {
+      // if there's a nav link, navigate there
       navigate(nav);
     }
     // otherwise assume there's an external link and open a new tab
