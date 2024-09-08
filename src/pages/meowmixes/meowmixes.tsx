@@ -6,14 +6,17 @@ import {
   ProjectTable,
   ProjectTableRow,
   ResponsiveContainer,
-  SweepButton
+  SweepButton,
+  SelectionSection
 } from '@website/ui';
+import { useState } from 'react';
 
-import { backgroundTapeTileDark } from '../../assets';
+import { anchovieHeadshot, backgroundTapeTileDark, jacquelynHeadshot } from '../../assets';
 
-const StyledMeowmixes = styled.div`
-  color: pink;
-`;
+const StyledMeowmixes = styled.div``;
+
+const ANCHOVIE = 'anchovie';
+const JACQUELYN = 'jacquelyn';
 
 const anchovieTapesConfig = [
   {
@@ -80,6 +83,72 @@ const anchovieTapesConfig = [
   }
 ];
 
+const jacquelynTapesConfig = [
+  {
+    title: '00 Metal4Cats:',
+    description:
+      'Selection of metal from before the project started, the only mix with no notes.txt or listening order.',
+    link: 'https://cloud.lexieloo.com/s/PgPdk3YCsdc6ixr'
+  },
+  {
+    title: '01 Chicken Tenders for the Transjackal Soul:',
+    description:
+      'Songs related to my transgender experience and furry identity crisis, more details in notes.txt',
+    link: 'https://cloud.lexieloo.com/s/LzYFT83n8FfggPZ'
+  },
+  {
+    title: '02 High Seas and Adventure:',
+    description: 'Nautical-themed for the first half, followed by a broader adventure narrative.',
+    link: 'https://cloud.lexieloo.com/s/SX2ay3QbC5YqJHQ'
+  },
+  {
+    title: '03 I Wanna 3 With U:',
+    description: 'Songs about love. In the good way, no breakups etc.',
+    link: 'https://cloud.lexieloo.com/s/nrRrgq9CdrqaSKr'
+  },
+  {
+    title: '04 4reign Affairs:',
+    description: 'Non-U.S.A artists / songs with non-English lyrics',
+    link: 'https://cloud.lexieloo.com/s/Q8ojWYWsN626owT'
+  },
+  {
+    title: '05 (Break-) Ups and Downs:',
+    description:
+      "Counterpart to B-side Mix 3, this one's about unhealthy relationships and breakups.",
+    link: 'https://cloud.lexieloo.com/s/QgoTYnFE3ymPX96'
+  },
+  {
+    title: '06 punk in cubLic:',
+    description: 'Various flavors of punk/punk-adjacent music.',
+    link: 'https://cloud.lexieloo.com/s/rQ2a8zC6NNRmX85'
+  },
+  {
+    title: '07 A Hip, Hop, and a Wrap:',
+    description: 'Hip hop, rap, and related music with a dash of off-topic filler.',
+    link: 'https://cloud.lexieloo.com/s/5srNP4zGnYoBQoY'
+  },
+  {
+    title: "08 Rock n' Roll Lifecycle:",
+    description: 'Loose concept mix featuring songs about rock culture.',
+    link: 'https://cloud.lexieloo.com/s/bbyCAw3gij5naL6'
+  },
+  {
+    title: '09 Go Tell It On The Mixtape:',
+    description: 'Storytelling where it feels like the vocalist is narrating to you.',
+    link: 'https://cloud.lexieloo.com/s/YtnGLp9iz8JWxB8'
+  },
+  {
+    title: '10 Madness:',
+    description: 'Unmitigated anger. A lot of metal in this one.',
+    link: 'https://cloud.lexieloo.com/s/RWkRTpdiKyGNjHb'
+  },
+  {
+    title: '11 The Sound Of:',
+    description: 'Selections from movie and videogame soundtracks.',
+    link: 'https://cloud.lexieloo.com/s/jCWRyQnwosb782P'
+  }
+];
+
 interface tapeConfigItem {
   title: string;
   description: string;
@@ -103,6 +172,7 @@ const meowmixRows = (tapeConfig: tapeConfigItem[]) => {
 };
 
 export function Meowmixes() {
+  const [activeDeck, setActiveDeck] = useState(ANCHOVIE);
   return (
     <StyledMeowmixes>
       <Global
@@ -114,8 +184,16 @@ export function Meowmixes() {
       />
       <Breadcrumb />
       <PageHeader heading="meowmixes" subheading="mixtapes between friends!" />
+      <SelectionSection
+        left={<SweepButton text={'A'} onClick={() => setActiveDeck(ANCHOVIE)} />}
+        leftImage={anchovieHeadshot}
+        right={<SweepButton text={'B'} onClick={() => setActiveDeck(JACQUELYN)} />}
+        rightImage={jacquelynHeadshot}
+      />
       <ResponsiveContainer>
-        <ProjectTable title="//anchovie's tapes">{meowmixRows(anchovieTapesConfig)}</ProjectTable>
+        <ProjectTable title={`//${activeDeck}'s tapes`}>
+          {meowmixRows(activeDeck === ANCHOVIE ? anchovieTapesConfig : jacquelynTapesConfig)}
+        </ProjectTable>
       </ResponsiveContainer>
     </StyledMeowmixes>
   );

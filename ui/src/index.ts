@@ -1,3 +1,4 @@
+export * from './lib/SelectionSection/SelectionSection';
 export * from './lib/ProjectTable/ProjectTable';
 export * from './lib/ProjectTable/ProjectTableRow';
 export * from './lib/Heading/Heading';
