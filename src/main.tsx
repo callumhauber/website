@@ -94,6 +94,7 @@ root.render(
           margin: auto;
           background-size: auto;
           background-repeat: repeat;
+          background-color: #303030;
         }
 
         p {
