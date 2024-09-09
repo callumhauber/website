@@ -50,9 +50,9 @@ export function Breadcrumb(props: BreadcrumbProps) {
   return (
     <Nav>
       <ol>
-        {crumbs.map((crumb, index) => (
+        {crumbs.map(({ link, text }, index, crumbs) => (
           <Fragment key={`${index}-fragment`}>
-            <li key={index}>{crumb}</li>
+            <li key={index}>{crumbs.length === index + 1 ? text : link}</li>
             {index !== crumbs.length - 1 && <li key={`${index}-slash`}> / </li>}
           </Fragment>
         ))}
