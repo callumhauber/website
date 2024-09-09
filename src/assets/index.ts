@@ -4,6 +4,13 @@ export { default as backgroundXTile } from './images/backgrounds/xtile.png';
 export { default as backgroundHappy } from './images/backgrounds/happy.png';
 export { default as backgroundTapeTileDark } from './images/backgrounds/tapetile_drk.png';
 
+// fwends
+export { default as hecate } from './images/fwends/hecate.png';
+export { default as luka } from './images/fwends/luka.png';
+export { default as me } from './images/fwends/me.png';
+export { default as west } from './images/fwends/west.png';
+export { default as wolfizen } from './images/fwends/wolfizen.png';
+
 // icons
 export { default as fishySquare } from './images/icons/fishy_square.png';
 export { default as boxNoBg } from './images/icons/box_no_bg.png';
