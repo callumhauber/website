@@ -34,21 +34,30 @@ const router = createBrowserRouter([
         path: 'about',
         element: <About />,
         handle: {
-          crumb: () => 'about'
+          crumb: () => {
+            return { link: <StyledLink to="/about">about</StyledLink>, text: 'about' };
+          }
         }
       },
       {
         path: 'commissions',
         element: <Commissions />,
         handle: {
-          crumb: () => 'commissions'
+          crumb: () => {
+            return {
+              link: <StyledLink to="/commissions">commissions</StyledLink>,
+              text: 'commissions'
+            };
+          }
         }
       },
       {
         path: 'projects',
         element: <Outlet />,
         handle: {
-          crumb: () => 'projects'
+          crumb: () => {
+            return { link: <StyledLink to="/projects">projects</StyledLink>, text: 'projects' };
+          }
         },
         children: [
           {
@@ -59,7 +68,12 @@ const router = createBrowserRouter([
             path: 'meowmixes',
             element: <Meowmixes />,
             handle: {
-              crumb: () => 'meowmixes'
+              crumb: () => {
+                return {
+                  link: <StyledLink to="/projects/meowmixes">meowmixes</StyledLink>,
+                  text: 'meowmixes'
+                };
+              }
             }
           }
         ]
@@ -68,12 +82,16 @@ const router = createBrowserRouter([
         path: 'fwends',
         element: <Fwends />,
         handle: {
-          crumb: () => 'fwends'
+          crumb: () => {
+            return { link: <StyledLink to="/fwends">fwends</StyledLink>, text: 'fwends' };
+          }
         }
       }
     ],
     handle: {
-      crumb: () => <StyledLink to="/">home</StyledLink>
+      crumb: () => {
+        return { link: <StyledLink to="/">home</StyledLink>, text: 'home' };
+      }
     }
   }
 ]);
