@@ -6,3 +6,4 @@ export { default as signature } from './badges/signature.png';
 export { default as backgroundGlitch } from './backgrounds/glitch_bg.png';
 
 export { default as newTagImg } from './icons/new.png';
+export { default as arrowMarker } from './icons/arrow_marker.png';
