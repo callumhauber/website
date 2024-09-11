@@ -30,6 +30,7 @@ const StyledProjects = styled.div``;
 export function Projects(props: ProjectsProps) {
   return (
     <StyledProjects>
+      <title>projects</title>
       <Global
         styles={css`
           body {

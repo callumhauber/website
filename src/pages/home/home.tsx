@@ -36,6 +36,7 @@ const StyledP = styled.p`
 export function Home(props: MainProps) {
   return (
     <StyledMain>
+      <title>anchovie.art</title>
       <Global
         styles={css`
           body {
