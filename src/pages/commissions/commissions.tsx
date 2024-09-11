@@ -20,6 +20,7 @@ const StyledCommissions = styled.div``;
 export function Commissions(props: CommissionsProps) {
   return (
     <StyledCommissions>
+      <title>commissions</title>
       <Global
         styles={css`
           body {

@@ -12,6 +12,7 @@ const StyledAbout = styled.div``;
 export function About(props: AboutProps) {
   return (
     <StyledAbout>
+      <title>about</title>
       <Global
         styles={css`
           body {

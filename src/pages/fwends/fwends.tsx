@@ -19,6 +19,7 @@ const StyledFwends = styled.div``;
 export function Fwends(props: FwendsProps) {
   return (
     <StyledFwends>
+      <title>fwends!!</title>
       <Global
         styles={css`
           body {

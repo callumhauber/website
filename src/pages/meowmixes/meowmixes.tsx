@@ -175,6 +175,7 @@ export function Meowmixes() {
   const [activeDeck, setActiveDeck] = useState(ANCHOVIE);
   return (
     <StyledMeowmixes>
+      <title>meowmixes</title>
       <Global
         styles={css`
           body {
